@@ -40,6 +40,12 @@
       <span>TO REALITY</span>
     </div>
   </div>
+
+  <div class="section">
+    <div class="section-video">
+      <div class="video"></div>
+    </div>
+  </div>
   </div>
 </template>
 
@@ -142,7 +148,6 @@ ul li {
       flex-direction: column;
       font-size: 64px;
       font-weight: 700;
-      border: 1px dashed limegreen;
       padding: 0 4%;
 
       &-left{

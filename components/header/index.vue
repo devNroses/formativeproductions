@@ -11,30 +11,21 @@
     </div>
 </template>
 
-<style lang="scss" scope>
-a {
-  color: #131514;
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
-
-  &:hover {
-color: #E3B047;
-  }
-}
-
+<style lang="scss" scoped>
  .header-container {
-   background-color: rgba(255, 255, 255, .15);
-    backdrop-filter: blur(5px);
+   background-color: rgba(255, 255, 255, .05);
+   backdrop-filter: blur(5px);
    display: flex;
    justify-content: space-between;
    padding: 0 50PX;
    min-height: 60px;
    position: sticky;
    top: 0;
+   z-index: 1;
 
    div {
     padding: 30px 0;
+    color: white;
    }
 
    @media only screen and (max-width: 480px)  {

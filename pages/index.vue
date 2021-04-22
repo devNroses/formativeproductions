@@ -1,6 +1,16 @@
 <template>
   <div class="container">
-    <div>
+    <div class="header-container">
+      <div>Logo</div>
+      <div>
+        <ul class="header-links">
+          <li><nuxt-link to="/work">Work</nuxt-link></li>
+          <li><nuxt-link to="/about">About</nuxt-link></li>
+          <li><nuxt-link to="/contact">Contact</nuxt-link></li>
+        </ul>
+      </div>
+    </div>
+    <!-- <div>
       <Logo />
       <h1 class="title">
         formativeproductions
@@ -23,7 +33,7 @@
           GitHub
         </a>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -33,43 +43,41 @@ import Vue from 'vue'
 export default Vue.extend({})
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+<style lang="scss">
+a{
+  color: #131514;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover{
+color: #E3B047;
+  }
 }
 
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
+ .header-container{
+   border: 2px dashed hotpink;
+   background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
+   display: flex;
+   justify-content: space-between;
+   padding: 0 50PX;
+   min-height: 60px;
+   position: sticky;
+   top: 0;
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
+   div{
+padding: 30px 0;
+   }
+ }
 
-.links {
-  padding-top: 15px;
-}
+ .header-links{
+   display: flex;
+   list-style: none;
+
+   li{
+     padding: 0 20px;
+   }
+ }
+
 </style>

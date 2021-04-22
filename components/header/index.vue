@@ -18,7 +18,7 @@
    display: flex;
    justify-content: space-between;
    padding: 0 50PX;
-   min-height: 60px;
+   height: 80px;
    position: sticky;
    top: 0;
    z-index: 1;

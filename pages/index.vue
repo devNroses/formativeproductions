@@ -14,6 +14,19 @@
       Video goes here
     </div>
   </div>
+
+  <div class="section">
+    <h1>WE ARE <br> FORMATIVE PRODUCTIONS</h1>
+    <p>
+      Specializing in visual storytelling, Formative Productions 
+is your go-to source for excellent results. From development 
+to production, our company is here to transmit your ideas 
+into a stunning visual representation. 
+
+    <a href="#">Learn More About Formative Productions</a>
+    </p>
+    
+  </div>
   </div>
 </template>
 
@@ -28,6 +41,18 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
+html, body {
+  height: 100%;
+  width: 100%;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+}
 a {
   color: white;
   font-size: 18px;
@@ -46,13 +71,11 @@ ul li {
   .landing{
     &-container{
       background: #131514;
-      position: absolute;
       padding: 0;
-      margin: 0;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      margin-top: -80px;
+      margin-bottom: 40px;
+      height: 100vh;
+      width: 100vw;
     }
 
     &-video{
@@ -84,5 +107,13 @@ ul li {
         margin-bottom: 30px;
       }
     }
+  }
+
+  .section{
+    border: 2px dashed red;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 20%;
+    color: red;
   }
 </style>

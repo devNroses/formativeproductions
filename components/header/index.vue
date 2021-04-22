@@ -50,7 +50,7 @@
      }
    }
 
-   @media only screen and (min-width: 750px)  {
+   @media only screen and (min-width: 500px)  {
      margin-bottom: 5px;
    }
  }

@@ -16,7 +16,7 @@
   </div>
 
   <div class="section">
-    <h1>WE ARE <br> <span>FORMATIVE PRODUCTIONS</span></h1>
+    <h1>WE ARE <br> <span>FORMATIVE <br>PRODUCTIONS</span></h1>
     <p>
       Specializing in visual storytelling, Formative Productions
       is your go-to source for excellent results. From development
@@ -123,6 +123,7 @@ ul li {
   .section{
     display: flex;
     flex-direction: column;
+    margin: 12px 8%;
     padding: 25px;
     word-break: break-all;
 
@@ -142,6 +143,7 @@ ul li {
       font-size: 64px;
       font-weight: 700;
       border: 1px dashed limegreen;
+      padding: 0 4%;
 
       &-left{
         text-align: left;
@@ -195,6 +197,10 @@ ul li {
         border-bottom: #F5BE4B 1px solid;
       }
     }
+
+     @media only screen and (max-width: 540px)  {
+        margin: 12px 0;
+       }
   }
 
   .video{

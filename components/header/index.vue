@@ -16,9 +16,10 @@
    background-color: rgba(255, 255, 255, .05);
    backdrop-filter: blur(5px);
    display: flex;
+   height: auto;
    justify-content: space-between;
+   margin-bottom: -75px;
    padding: 0 50PX;
-   height: 80px;
    position: sticky;
    top: 0;
    z-index: 1;
@@ -47,6 +48,10 @@
          }
        }
      }
+   }
+
+   @media only screen and (min-width: 750px)  {
+     margin-bottom: 5px;
    }
  }
 

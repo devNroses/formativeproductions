@@ -16,16 +16,29 @@
   </div>
 
   <div class="section">
-    <h1>WE ARE <br> FORMATIVE PRODUCTIONS</h1>
+    <h1>WE ARE <br> <span>FORMATIVE PRODUCTIONS</span></h1>
     <p>
-      Specializing in visual storytelling, Formative Productions 
-is your go-to source for excellent results. From development 
-to production, our company is here to transmit your ideas 
-into a stunning visual representation. 
+      Specializing in visual storytelling, Formative Productions
+      is your go-to source for excellent results. From development
+      to production, our company is here to transmit your ideas
+      into a stunning visual representation.
+    </p>
 
     <a href="#">Learn More About Formative Productions</a>
-    </p>
-    
+  </div>
+
+  <div class="section">
+    <div class="section-video">
+      <div class="video"></div>
+    </div>
+  </div>
+
+   <div class="section">
+    <div class="section-announcement section-announcement-right">
+      <span>FROM IDEA</span>
+      <span>TO PRODUCTION</span>
+      <span>TO REALITY</span>
+    </div>
   </div>
   </div>
 </template>
@@ -72,7 +85,7 @@ ul li {
     &-container{
       background: #131514;
       padding: 0;
-      margin-top: -80px;
+      margin-top: calc(-1% - 80px);
       margin-bottom: 40px;
       height: 100vh;
       width: 100vw;
@@ -80,7 +93,6 @@ ul li {
 
     &-video{
       color: hotpink;
-      border: 2px dashed hotpink;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -94,7 +106,6 @@ ul li {
     }
 
     &-social{
-      border: 1px dashed limegreen;
       display: flex;
       flex-direction: column;
       color: limegreen;
@@ -110,10 +121,85 @@ ul li {
   }
 
   .section{
-    border: 2px dashed red;
     display: flex;
     flex-direction: column;
-    padding: 25px 20%;
-    color: red;
+    padding: 25px;
+    word-break: break-all;
+
+    &-video{
+      display: flex;
+      width: 100%;
+      height: auto;
+      box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 2.15em rgba(0,0,0,0.4);
+    }
+
+    &-announcement{
+      display: flex;
+      flex-direction: column;
+      font-size: 64px;
+      font-weight: 700;
+      border: 1px dashed limegreen;
+
+      &-left{
+        text-align: left;
+      }
+      &-right{
+        text-align: right;
+      }
+
+      span{
+        &:first-child{
+          -webkit-text-stroke: 2px black;
+          color: white;
+        }
+
+        &:last-child{
+          color: #E3B047;
+        }
+      }
+
+       @media only screen and (max-width: 540px)  {
+         font-size: 36px;
+       }
+    }
+
+    h1{
+      font-size: 48px;
+      font-weight: 900;
+
+      span{
+        color: #E3B047;
+      }
+    }
+
+    p{
+      max-width: 620px;
+      font-size: 18px;
+      line-height: 2.25;
+      margin-top: 24px;
+    }
+
+    a{
+      color: #E3B047;
+      margin-top: 18px;
+      font-weight: 800;
+      border-bottom: #E3B047 1px solid;
+      max-width: fit-content;
+      padding-bottom: 4px;
+
+      &:hover{
+        color: #F5BE4B;
+        border-bottom: #F5BE4B 1px solid;
+      }
+    }
+  }
+
+  .video{
+    background: hotpink;
+    width: 100%;
+    height: 346px;
   }
 </style>

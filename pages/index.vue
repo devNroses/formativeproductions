@@ -1,51 +1,51 @@
 <template>
   <div class="container">
-  <Header />
-  <div class="landing-container">
-    Landing Here
-    <div class="landing-social">
-      <ul>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Vimeo</a></li>
-      </ul>
+    <Header />
+    <div class="landing-container">
+      Landing Here
+      <div class="landing-social">
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Vimeo</a></li>
+        </ul>
+      </div>
+      <div class="landing-video">
+        Video goes here
+      </div>
     </div>
-    <div class="landing-video">
-      Video goes here
+
+    <div class="section">
+      <h1>WE ARE <br> <span>FORMATIVE <br>PRODUCTIONS</span></h1>
+      <p>
+        Specializing in visual storytelling, Formative Productions
+        is your go-to source for excellent results. From development
+        to production, our company is here to transmit your ideas
+        into a stunning visual representation.
+      </p>
+
+      <a href="#">Learn More About Formative Productions</a>
     </div>
-  </div>
 
-  <div class="section">
-    <h1>WE ARE <br> <span>FORMATIVE <br>PRODUCTIONS</span></h1>
-    <p>
-      Specializing in visual storytelling, Formative Productions
-      is your go-to source for excellent results. From development
-      to production, our company is here to transmit your ideas
-      into a stunning visual representation.
-    </p>
-
-    <a href="#">Learn More About Formative Productions</a>
-  </div>
-
-  <div class="section">
-    <div class="section-video">
-      <div class="video"></div>
+    <div class="section">
+      <div class="section-video">
+        <div class="video"></div>
+      </div>
     </div>
-  </div>
 
-   <div class="section">
-    <div class="section-announcement section-announcement-right">
-      <span>FROM IDEA</span>
-      <span>TO PRODUCTION</span>
-      <span>TO REALITY</span>
+    <div class="section">
+      <div class="section-announcement section-announcement-right">
+        <span>FROM IDEA</span>
+        <span>TO PRODUCTION</span>
+        <span>TO REALITY</span>
+      </div>
     </div>
-  </div>
 
-  <div class="section">
-    <div class="section-video">
-      <div class="video"></div>
+    <div class="section">
+      <div class="section-video">
+        <div class="video"/>
+      </div>
     </div>
-  </div>
   </div>
 </template>
 
@@ -77,6 +77,7 @@ a {
   font-size: 18px;
   font-weight: 600;
   text-decoration: none;
+  transition: all 350ms ease-out;
 
   &:hover {
   color: #E3B047;
@@ -91,7 +92,6 @@ ul li {
     &-container{
       background: #131514;
       padding: 0;
-      margin-top: calc(-1% - 80px);
       margin-bottom: 40px;
       height: 100vh;
       width: 100vw;

@@ -1,40 +1,63 @@
 <template>
-      <div class="header-container">
-      <div>Logo</div>
-      <div>
-        <ul class="header-links">
-          <li><nuxt-link to="/work">Work</nuxt-link></li>
-          <li><nuxt-link to="/about">About</nuxt-link></li>
-          <li><nuxt-link to="/contact">Contact</nuxt-link></li>
-        </ul>
-      </div>
+  <nav class="header-container">
+    <div>Logo</div>
+    <div>
+      <ul class="header-links" :class="{changeColor: changeColor}">
+        <li><nuxt-link to="/work">Work</nuxt-link></li>
+        <li><nuxt-link to="/about">About</nuxt-link></li>
+        <li><nuxt-link to="/contact">Contact</nuxt-link></li>
+      </ul>
     </div>
+  </nav>
 </template>
 
-<style lang="scss" scope>
-a {
-  color: #131514;
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+@Component
+export default class Header extends Vue {
+  changeColor: boolean = false
 
-  &:hover {
-color: #E3B047;
+  mounted () {
+    window.addEventListener('scroll', this.onScroll)
+    this.changeColor = false
+  }
+
+  beforeDestroy () {
+    window.removeEventListener('scroll', this.onScroll)
+  }
+
+  windowTop = window.top.scrollY
+
+  onScroll () {
+    this.windowTop = window.top.scrollY /* or: e.target.documentElement.scrollTop */
+
+    if (this.windowTop > 580) {
+      this.changeColor = true
+    } else {
+      this.changeColor = false
+    }
   }
 }
 
+</script>
+
+<style lang="scss" scoped>
  .header-container {
-   background-color: rgba(255, 255, 255, .15);
-    backdrop-filter: blur(5px);
+   background-color: rgba(255, 255, 255, .05);
+   backdrop-filter: blur(5px);
    display: flex;
+   height: auto;
    justify-content: space-between;
    padding: 0 50PX;
-   min-height: 60px;
-   position: sticky;
+   position: fixed;
    top: 0;
+   width: 100%;
+   z-index: 1;
 
    div {
     padding: 30px 0;
+    width: fit-content;
+    color: white;
    }
 
    @media only screen and (max-width: 480px)  {
@@ -65,6 +88,16 @@ color: #E3B047;
 
    li {
      padding: 0 20px;
+   }
+ }
+
+ .changeColor {
+   a{
+   color: black !important;
+
+   &:hover {
+    color: #E3B047 !important;
+    }
    }
  }
 

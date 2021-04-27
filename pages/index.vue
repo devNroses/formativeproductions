@@ -4,9 +4,9 @@
       Landing Here
       <div class="landing-social">
         <ul>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Vimeo</a></li>
+          <li><a href="#"><img src="~/assets/img/instagram.png" /></a></li>
+          <li><a href="#"><img src="~/assets/img/twitter.png" /></a></li>
+          <li><a href="#"><img src="~/assets/img/vimeo.png" /></a></li>
         </ul>
       </div>
       <div class="landing-video">
@@ -111,6 +111,8 @@ ul li {
 
       ul li{
         margin-bottom: 30px;
+
+        img { width: 20px;}
       }
     }
   }

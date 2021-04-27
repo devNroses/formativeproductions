@@ -29,7 +29,7 @@
 
     <div class="section">
       <div class="section-video">
-        <div class="video"></div>
+        <div class="video" />
       </div>
     </div>
 
@@ -43,18 +43,22 @@
 
     <div class="section">
       <div class="section-video">
-        <div class="video"/>
+        <div class="video" />
       </div>
     </div>
+
+    <Footer />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import Header from '../components/header/index.vue'
+import Footer from '../components/footer/index.vue'
 export default Vue.extend({
   components: {
-    Header
+    Header,
+    Footer
   }
 })
 </script>

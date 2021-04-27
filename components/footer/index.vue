@@ -21,8 +21,9 @@
             <span>Phone</span>
             <p>719-233-3620</p>
           </div>
-          <div>
-            socail goes here
+          <div class="social">
+            <div>Instagram</div>
+            <div>Vimeo</div>
           </div>
         </div>
       </div>
@@ -137,5 +138,20 @@ export default class Footer extends Vue {
             }
           }
         }
+    }
+
+    .social{
+      display: flex;
+      justify-content: center;
+      padding: 0px !important;
+
+      div{
+        padding: 60px;
+      &:first-child{
+       border: none !important;
+       border-right: 1px solid #131514;
+      }
+
+      }
     }
 </style>

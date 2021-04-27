@@ -1,6 +1,5 @@
 <template>
-  <div class="container">
-    <Header />
+<div class="wrapper">
     <div class="landing-container">
       Landing Here
       <div class="landing-social">
@@ -29,7 +28,7 @@
 
     <div class="section">
       <div class="section-video">
-        <div class="video"></div>
+        <div class="video" />
       </div>
     </div>
 
@@ -43,21 +42,11 @@
 
     <div class="section">
       <div class="section-video">
-        <div class="video"/>
+        <div class="video" />
       </div>
     </div>
-  </div>
+</div>
 </template>
-
-<script lang="ts">
-import Vue from 'vue'
-import Header from '../components/header/index.vue'
-export default Vue.extend({
-  components: {
-    Header
-  }
-})
-</script>
 
 <style lang="scss">
 html, body {

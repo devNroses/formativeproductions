@@ -1,6 +1,5 @@
 <template>
-  <div class="container">
-    <Header />
+<div class="wrapper">
     <div class="landing-container">
       Landing Here
       <div class="landing-social">
@@ -46,22 +45,8 @@
         <div class="video" />
       </div>
     </div>
-
-    <Footer />
-  </div>
+</div>
 </template>
-
-<script lang="ts">
-import Vue from 'vue'
-import Header from '../components/header/index.vue'
-import Footer from '../components/footer/index.vue'
-export default Vue.extend({
-  components: {
-    Header,
-    Footer
-  }
-})
-</script>
 
 <style lang="scss">
 html, body {

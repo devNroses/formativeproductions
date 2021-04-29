@@ -10,7 +10,8 @@
         </ul>
       </div>
       <div class="landing-video">
-        Video goes here
+        <img src="~/assets/img/video1.jpg">
+        <div class="overlay" />
       </div>
     </div>
 
@@ -26,13 +27,7 @@
       <a href="#">Learn More About Formative Productions</a>
     </div>
 
-    <div class="section">
-      <div class="section-video">
-        <div class="video" />
-      </div>
-    </div>
-
-    <div class="section">
+  <div class="section">
       <div class="section-announcement section-announcement-right">
         <span>FROM IDEA</span>
         <span>TO PRODUCTION</span>
@@ -42,9 +37,12 @@
 
     <div class="section">
       <div class="section-video">
-        <div class="video" />
+        <div class="video">
+          <img src="~/assets/img/video2.jpg">
+        </div>
       </div>
     </div>
+
 </div>
 </template>
 
@@ -84,6 +82,7 @@ ul li {
       margin-bottom: 40px;
       height: 100vh;
       width: 100vw;
+      overflow: hidden;
     }
 
     &-video{
@@ -98,6 +97,19 @@ ul li {
       left: 0;
       width: 100%;
       height: 100%;
+      overflow: hidden;
+
+      &:hover{
+      .overlay{
+         display: block;
+    background: rgba(0, 0, 0, .4);
+      }
+      }
+
+       img {
+      min-width: 100%;
+      min-height: 100%;
+}
     }
 
     &-social{
@@ -108,6 +120,10 @@ ul li {
       position: absolute;
       top: calc(48% - 40px);
       margin-left: 50px;
+
+       @media only screen and (max-width: 540px)  {
+        display: none;
+       }
 
       ul li{
         margin-bottom: 30px;
@@ -202,6 +218,31 @@ ul li {
   .video{
     background: hotpink;
     width: 100%;
-    height: 346px;
+    max-height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    @media only screen and (max-width: 780px)  {
+       height: 210px;
+       }
+
+     img {
+      min-width: 100%;
+      min-height: 100%;
+}
+  }
+
+  .overlay{
+     position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+   display: block;
+    background: rgba(0, 0, 0, .3);
+    color: #FFF;
+    transition: all 300ms ease-in-out;
+
   }
 </style>

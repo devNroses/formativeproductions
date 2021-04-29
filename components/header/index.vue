@@ -68,6 +68,7 @@ export default class Header extends Vue {
      div {
        display: flex;
        justify-content: center;
+       margin-left: -20px;
      }
 
      .header-links {

@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="about-container">
 
     <div class="about-landing">
         <div class="about-landing-content">
@@ -104,16 +104,26 @@ export default Vue.extend({
 
 <style lang="scss" scope>
     .about{
+
+        &-container{
+            width: 100%;
+            padding: 0px;
+            margin: 0px;
+        }
         &-landing{
             background-image: url(~/assets/img/about-landing.jpg);
             background-size:cover;
             background-repeat: no-repeat;
-            background-position: center center;
+            background-position: center;
             display: flex;
             flex-direction: column;
             min-height: 90vh;
             padding: 60px;
             width: 100%;
+
+                      @media only screen and (max-width: 768px)  {
+           padding: 0px;
+       }
 
             &-content{
                 color: white;
@@ -142,6 +152,10 @@ hyphens: none;
             align-items: flex-start;
             flex-wrap: wrap;
             padding: 60px;
+
+              @media only screen and (max-width: 768px)  {
+           padding: 0px;
+       }
 
             div{
                 flex: 1 1 0;

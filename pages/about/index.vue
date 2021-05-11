@@ -15,7 +15,7 @@ to life.”</p>
 
       <div class="about-section">
             <div>
-                <div class="ourMission-img"> Image </div>
+                <div class="ourMission-img" />
             </div>
             <div>
                 <div class="ourMission-content">
@@ -68,6 +68,31 @@ budget. If you have questions, contact us today.
                 </div>
                  <div class="value-img" />
              </div>
+
+                  <div class="team-container">
+                    <p class="about-section-header">
+                       MEET THE TEAM
+                    </p>
+                    <div class="team-members">
+                        <div>
+                            <div class="members-img"><img src="~/assets/img/trentonCotten.png" alt="Trenton Cotten"/></div>
+                            <p class="members-name">TRENTON COTTEN</p>
+                            <p class="members-position">Creative Director / Producer</p>
+                        </div>
+                        <div>
+                            <div class="members-img"><img src="~/assets/img/tauraCotten.png" alt="Taura Cotten"/></div>
+                            <p class="members-name">Taura Cotten</p>
+                            <p class="members-position">Project / Business Manager</p>
+
+                        </div>
+                        <div>
+                            <div class="members-img"><img src="~/assets/img/julieRamirez.png" alt="Julie Ramirez"/></div>
+                            <p class="members-name">Julie Ramirez</p>
+                            <p class="members-position">Producer</p>
+
+                        </div>
+                    </div>
+                  </div>
 </div>
 </template>
 
@@ -173,6 +198,55 @@ hyphens: none;
 
         &-content{
              padding: 160px 40px;
+        }
+    }
+
+    .team{
+        &-container{
+            display: flex;
+            flex-direction: column;
+            padding: 0px 60px;
+            margin: 40px auto 20px;
+        }
+
+        &-members{
+            display: flex !important;
+            justify-content: space-evenly !important;
+            flex-wrap: wrap !important;
+
+            div{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 10px 20px;
+                width: 300px;
+                height: 380px;
+                transition: linear 1s;
+            }
+        }
+    }
+
+    .members{
+        div{
+            flex: none !important;
+        }
+        &-img{
+             display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    overflow: hidden;
+    border-radius: 50%;
+        }
+
+        &-name{
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        &-position{
+            font-size: 16px;
         }
     }
 

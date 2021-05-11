@@ -1,6 +1,8 @@
 <template>
   <nav class="header-container">
-    <div class="header-logo" />
+   <nuxt-link to="/">
+   <div class="header-logo" />
+    </nuxt-link>
     <div>
       <ul class="header-links" :class="{changeColor: changeColor}">
         <li><nuxt-link to="/work">Work</nuxt-link></li>
@@ -55,7 +57,7 @@ export default class Header extends Vue {
    z-index: 1;
 
    div {
-    padding: 30px 0;
+    padding: 40px 0;
     width: fit-content;
     color: white;
    }
@@ -108,6 +110,7 @@ export default class Header extends Vue {
     background-color: #E3B047; /* defines the background color of the image */
   mask: url(~/assets/img/formative-logo.svg) no-repeat center / contain;
   -webkit-mask: url(~/assets/img/formative-logo.svg) no-repeat center / contain;
+  margin-top: 10px;
  }
 
 </style>

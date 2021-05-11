@@ -58,6 +58,7 @@ html, body {
   padding: 0;
   top: 0;
   left: 0;
+  overflow-x: hidden;
 }
 a {
   color: white;

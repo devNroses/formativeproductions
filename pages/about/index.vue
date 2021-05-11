@@ -6,7 +6,7 @@
             <p>
                 “Whether you’re starting
 with a vague idea or a
-<br>fully-fleshed out concept,
+<span>fully-fleshed</span> out concept,
 <span class="about-landing-content-highlight">Formative Productions</span>
 can bring your vision
 to life.”</p>
@@ -138,10 +138,18 @@ export default Vue.extend({
                 -webkit-hyphens: none;
 -moz-hyphens: none;
 hyphens: none;
+           margin: 380px 30px;
+           background-color:rgba(0, 0, 0, 0.5);
+           padding: 25px;
 
 &-highlight{
     color: #E3B047;
 }
+
+              @media only screen and (max-width: 768px)  {
+           font-size: 28px;
+
+       }
 
             }
         }
@@ -155,6 +163,7 @@ hyphens: none;
 
               @media only screen and (max-width: 768px)  {
            padding: 0px;
+           padding-bottom: 60px;
        }
 
             div{
@@ -198,6 +207,10 @@ hyphens: none;
         &-content{
             height: 500px;
             padding: 120px 40px;
+
+               @media only screen and (max-width: 768px)  {
+          padding: 80px 40px 120px;
+       }
         }
     }
 
@@ -212,6 +225,10 @@ hyphens: none;
 
         &-content{
              padding: 160px 40px;
+
+                      @media only screen and (max-width: 768px)  {
+          padding: 80px 40px 10px;
+       }
         }
     }
 

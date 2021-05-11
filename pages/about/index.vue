@@ -33,6 +33,41 @@ from start to finish.
                 </div>
             </div>
             </div>
+
+             <div class="about-section reverse">
+                 <div>
+                     <div class="value-content">
+                          <p class="about-section-header">
+                        HOW WE BRING <span class="about-landing-content-highlight">VALUE</span>
+                    </p>
+                    <p class="about-section-content">
+                        As true partners and creative problem solvers,
+we ensure that each of our services lead to your
+satisfaction and success.
+                    </p>
+
+                    <p class="about-section-subHead">
+                        PRE-PRODUCTION
+                    </p>
+                    <p class="about-section-content">
+                        With a team dedicated to Pre-Production, we
+guarantee to provide the highest quality result for
+all of our clients. No matter what type of project
+you’re looking to create, we’re here to make it reality.
+                    </p>
+                    <p class="about-section-subHead">
+                        POST-PRODUCTION
+                    </p>
+                    <p class="about-section-content">
+                       When it comes to Post-Production, you can count on
+us to continue working until it’s exactly what you’re
+looking for while still staying within your timeline and
+budget. If you have questions, contact us today.
+                    </p>
+                    </div>
+                </div>
+                 <div class="value-img" />
+             </div>
 </div>
 </template>
 
@@ -51,7 +86,7 @@ export default Vue.extend({
             background-position: center center;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
+            min-height: 90vh;
             padding: 60px;
             width: 100%;
 
@@ -77,7 +112,6 @@ hyphens: none;
         }
 
         &-section{
-            border: 2px solid hotpink;
             display: flex;
             justify-items: baseline;
             align-items: flex-start;
@@ -90,14 +124,21 @@ hyphens: none;
             }
 
             &-header{
-                font-size: 36px;
-                font-weight: bolder;
+                font-size: 40px;
+                font-weight: 800;
                 margin-bottom: 15px;
                 text-transform: capitalize;
             }
 
+            &-subHead{
+                font-size: 28px;
+                font-weight: 600;
+                margin: 50px 0px 15px;
+                text-transform: capitalize;
+            }
+
             &-content{
-                font-size: 18px;
+                font-size: 20px;
                 width: 85%;
                 line-height: 1.45em;
             }
@@ -120,4 +161,22 @@ hyphens: none;
             padding: 120px 40px;
         }
     }
+
+    .value{
+        &-img{
+            background-image: url(~/assets/img/about-img2.jpg);
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: 820px;
+        }
+
+        &-content{
+             padding: 160px 40px;
+        }
+    }
+
+     .reverse{
+                flex-wrap: wrap-reverse !important;
+            }
 </style>

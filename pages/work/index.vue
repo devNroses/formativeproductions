@@ -10,30 +10,15 @@
 
     <div class="section">
       <div class="section-video work-video">
-        video
+        <img src="~/assets/img/demo-reel.png" />
       </div>
     </div>
 
     <div class="section">
       <div class="work-card">
         <div @click="toggleShowVideo" class="section-video work-video">
-          video
+          <img src="~/assets/img/colorado-springs-museum.png" />
         </div>
-        <transition name="fade" appear>
-          <div v-if="show" @click="toggleShowVideo" class="modal-overlay" />
-        </transition>
-        <transition name="pop" appear>
-          <div class="modal" role="dialog" v-if="show">
-            <h1>Vue Transitions</h1>
-            <p>
-              The <code>&lt;transition&gt;</code> component in Vue can create
-              wonderful animated entrances and exits.
-            </p>
-            <button @click="toggleShowVideo" class="button">
-              Hide Modal
-            </button>
-          </div>
-        </transition>
         <p class="work-card-title">Colorado Springs museum</p>
         <p class="work-card-content">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -44,7 +29,7 @@
       </div>
       <div class="work-card">
         <div class="section-video work-video">
-          video
+          <img src="~/assets/img/football-season.png" />
         </div>
         <p class="work-card-title">Football Season</p>
         <p class="work-card-content">
@@ -55,6 +40,18 @@
         </p>
       </div>
     </div>
+
+    <transition name="fade" appear>
+      <div v-if="show" @click="toggleShowVideo" class="modal-overlay" />
+    </transition>
+    <transition name="pop" appear>
+      <div class="modal" role="dialog" v-if="show">
+        <p>Show Video</p>
+        <button @click="toggleShowVideo" class="button">
+          Hide Modal
+        </button>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -97,10 +94,21 @@ export default class Work extends Vue {
   }
 
   &-video {
-    background-color: hotpink !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
     height: 300px;
     max-width: 750px;
     margin: 0 auto;
+
+    img {
+      flex-shrink: 0.5;
+      min-width: 100%;
+      min-height: 100%;
+      margin-top: 65px;
+      margin-left: 30px;
+    }
   }
 
   &-card {

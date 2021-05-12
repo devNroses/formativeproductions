@@ -15,8 +15,30 @@
     </div>
 
     <div class="section">
-      <div class="work-card" />
-      <div class="work-card" />
+      <div class="work-card">
+        <div class="section-video work-video">
+          video
+        </div>
+        <p class="work-card-title">Colorado Springs museum</p>
+        <p class="work-card-content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <div class="work-card">
+        <div class="section-video work-video">
+          video
+        </div>
+        <p class="work-card-title">Football Season</p>
+        <p class="work-card-content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -29,7 +51,6 @@ export default Vue.extend({});
 <style lang="scss" scoped>
 .work {
   &-wrapper {
-    border: 2px dahsed hotpink;
     display: flex;
     flex-direction: column;
   }
@@ -64,13 +85,32 @@ export default Vue.extend({});
     display: flex;
     flex-direction: column;
     align-self: flex-start;
-    border: 2px solid royalblue;
     max-width: 500px;
-    height: 400px;
+    height: 100%;
     width: 100%;
 
+    &-title {
+      padding-top: 20px;
+      font-size: 22px;
+      font-weight: 700;
+      color: #e3b047;
+    }
+
+    &-content {
+      margin-top: 0px;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    .work-video {
+      height: 200px;
+      overflow: hidden;
+      margin-bottom: -25px;
+    }
+
     &:nth-child(even) {
-      border: 4px dashed red;
+      align-self: flex-end;
+      margin-top: 40px;
     }
   }
 }

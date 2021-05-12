@@ -150,6 +150,11 @@ export default Vue.extend({});
         font-size: 28px;
         margin: 460px 30px;
       }
+
+      @media only screen and (max-width: 480px) {
+        font-size: 20px;
+        margin: 300px 25px;
+      }
     }
   }
 

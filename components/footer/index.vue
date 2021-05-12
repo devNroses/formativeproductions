@@ -21,10 +21,10 @@
             <span>Phone</span>
             <p>719-233-3620</p>
           </div>
-          <div class="social">
+          <!-- <div class="social">
             <div>Instagram</div>
             <div>Vimeo</div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

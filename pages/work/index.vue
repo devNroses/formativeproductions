@@ -8,39 +8,39 @@
       </h1>
     </div>
 
-    <div class="section">
+    <!-- <div class="section">
       <div
         @click="toggleShowVideo('536417585')"
         class="section-video work-video"
       >
         <img src="~/assets/img/demo-reel.png" />
       </div>
-    </div>
+    </div> -->
 
     <div class="section">
       <div class="work-card" @click="toggleShowVideo('487463591')">
         <div class="section-video work-video">
-          <img src="~/assets/img/colorado-springs-museum.png" />
+          <img src="~/assets/img/realPeople.png" />
         </div>
         <p class="work-card-title">Real Peopl / Real Story</p>
-        <p class="work-card-content">
+        <!-- <p class="work-card-content">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat.
-        </p>
+        </p> -->
       </div>
       <div class="work-card" @click="toggleShowVideo('536427164')">
         <div class="section-video work-video">
           <img src="~/assets/img/football-season.png" />
         </div>
         <p class="work-card-title">Football Season</p>
-        <p class="work-card-content">
+        <!-- <p class="work-card-content">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat.
-        </p>
+        </p> -->
       </div>
     </div>
 
@@ -112,7 +112,7 @@ iframe {
     margin: 0 auto;
 
     img {
-      flex-shrink: 0.5;
+      flex-shrink: 0.65;
       min-width: 100%;
       min-height: 100%;
       margin-top: 65px;
@@ -124,7 +124,7 @@ iframe {
     display: flex;
     flex-direction: column;
     align-self: flex-start;
-    max-width: 500px;
+    max-width: 550px;
     height: 100%;
     width: 100%;
 
@@ -146,14 +146,15 @@ iframe {
     }
 
     .work-video {
-      height: 200px;
+      height: 350px;
       overflow: hidden;
       margin-bottom: -25px;
+      max-width: 625px;
     }
 
     &:nth-child(even) {
       align-self: flex-end;
-      margin-top: 40px;
+      margin-top: 30px;
     }
   }
 }

@@ -43,7 +43,7 @@
 
     <div class="section">
       <div class="section-video">
-        <div class="video">
+        <div class="video" @click="toggleModal('536427164')">
           <img src="~/assets/img/video2.jpg" />
         </div>
       </div>
@@ -250,6 +250,10 @@ ul li {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   @media only screen and (max-width: 780px) {
     height: 210px;

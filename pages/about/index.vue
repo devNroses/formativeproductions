@@ -223,7 +223,7 @@
 
   &-content {
     height: 820px;
-    padding: 80px 40px;
+    padding: 100px 40px;
 
     .about-section-subHead {
       font-size: 22px;

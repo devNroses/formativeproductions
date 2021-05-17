@@ -19,6 +19,7 @@
         <div class="footer-content-2">
           <div>
             <span>Phone</span>
+            <!-- <p><a href="tel:7192333620">719-233-3620</a></p> -->
             <p>719-233-3620</p>
           </div>
           <!-- <div class="social">

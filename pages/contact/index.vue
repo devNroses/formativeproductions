@@ -18,7 +18,9 @@
           via:
         </p>
 
-        <a href="#">trentoncotten@formativeproductions.com</a>
+        <a href="mailto:trentoncotten@formativeproductions.com"
+          >trentoncotten@formativeproductions.com</a
+        >
       </div>
     </div>
   </div>

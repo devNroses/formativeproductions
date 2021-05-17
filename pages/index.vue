@@ -12,6 +12,9 @@
       <div class="landing-video">
         <img src="~/assets/img/video1.jpg" />
         <div class="overlay" />
+        <div class="play-button-outer" @click="toggleModal('536417585')">
+          <div class="play-button"></div>
+        </div>
       </div>
     </div>
 
@@ -27,7 +30,7 @@
         representation.
       </p>
 
-      <a href="#">Learn More About Formative Productions</a>
+      <nuxt-link to="/about">Learn More About Formative Productions</nuxt-link>
     </div>
 
     <div class="section">
@@ -40,13 +43,37 @@
 
     <div class="section">
       <div class="section-video">
-        <div class="video">
+        <div class="video" @click="toggleModal('536427164')">
           <img src="~/assets/img/video2.jpg" />
         </div>
       </div>
     </div>
+    <VideoModal :showModal="show" :viewVideoid="landingVideoId" />
   </div>
 </template>
+
+<script lang="ts">
+import { Vue } from "vue-property-decorator";
+import VideoModal from "../components/videoModal/index.vue";
+
+export default Vue.extend({
+  components: {
+    VideoModal
+  },
+  data() {
+    return {
+      show: false,
+      landingVideoId: ""
+    };
+  },
+  methods: {
+    toggleModal(id: string) {
+      this.landingVideoId = id;
+      this.show = !this.show;
+    }
+  }
+});
+</script>
 
 <style lang="scss">
 html,
@@ -102,11 +129,9 @@ ul li {
     height: 100%;
     overflow: hidden;
 
-    &:hover {
-      .overlay {
-        display: block;
-        background: rgba(0, 0, 0, 0.4);
-      }
+    .overlay {
+      display: block;
+      background: rgba(0, 0, 0, 0.4);
     }
 
     img {
@@ -219,13 +244,16 @@ ul li {
 }
 
 .video {
-  background: hotpink;
   width: 100%;
   max-height: 360px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   @media only screen and (max-width: 780px) {
     height: 210px;
@@ -246,5 +274,41 @@ ul li {
   background: rgba(0, 0, 0, 0.3);
   color: #fff;
   transition: all 300ms ease-in-out;
+}
+
+.play-button-outer {
+  margin: 25% auto;
+  width: 10em;
+  height: 10em;
+  background-color: rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  position: absolute;
+  border: 2px solid #fff;
+  border-radius: 15%;
+  transition: all 350ms ease-out;
+
+  &:hover {
+    border: 2px solid #e3b047;
+  }
+}
+
+.play-button {
+  margin: 0 auto;
+  top: 25%;
+  position: relative;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 2.5em 0 2.5em 5em;
+  border-color: transparent transparent transparent #e3b047;
+  opacity: 0.75;
+}
+
+.play-button-outer:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.play-button-outer:hover .play-button {
+  opacity: 1;
 }
 </style>

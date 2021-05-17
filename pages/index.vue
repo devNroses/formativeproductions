@@ -30,7 +30,7 @@
         representation.
       </p>
 
-      <a href="#">Learn More About Formative Productions</a>
+      <nuxt-link to="/about">Learn More About Formative Productions</nuxt-link>
     </div>
 
     <div class="section">

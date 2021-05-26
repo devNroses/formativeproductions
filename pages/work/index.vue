@@ -18,8 +18,14 @@
     </div> -->
 
     <div class="section">
-      <div class="work-card" @click="toggleShowVideo('487463591')">
-        <div class="section-video work-video">
+      <div
+        class="work-card"
+        @click="
+          setVideoId('487463591');
+          toggleModal();
+        "
+      >
+        <div class="video-container work-video">
           <img src="~/assets/img/realPeople.png" />
         </div>
         <p class="work-card-title">Real Peopl / Real Story</p>
@@ -30,8 +36,14 @@
           aliquip ex ea commodo consequat.
         </p> -->
       </div>
-      <div class="work-card" @click="toggleShowVideo('536427164')">
-        <div class="section-video work-video">
+      <div
+        class="work-card"
+        @click="
+          setVideoId('536427164');
+          toggleModal();
+        "
+      >
+        <div class="video-container work-video">
           <img src="~/assets/img/football-season.png" />
         </div>
         <p class="work-card-title">Football Season</p>
@@ -62,9 +74,11 @@ export default Vue.extend({
     };
   },
   methods: {
-    toggleShowVideo(videoId: string) {
-      this.workVideoId = videoId;
+    toggleModal() {
       this.show = !this.show;
+    },
+    setVideoId(id: string) {
+      this.workVideoId = id;
     }
   }
 });
@@ -103,20 +117,11 @@ iframe {
   }
 
   &-video {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    height: 300px;
-    max-width: 950px;
-    margin: 0 auto;
+    width: 100% !important;
 
     img {
-      flex-shrink: 0.65;
-      min-width: 100%;
-      min-height: 100%;
-      margin-top: 65px;
-      margin-left: 30px;
+      width: 102%;
+      height: auto !important;
     }
   }
 
@@ -124,13 +129,9 @@ iframe {
     display: flex;
     flex-direction: column;
     align-self: flex-start;
-    max-width: 550px;
+    max-width: 800px;
     height: 100%;
     width: 100%;
-
-    &:hover {
-      cursor: pointer;
-    }
 
     &-title {
       padding-top: 20px;
@@ -149,7 +150,6 @@ iframe {
       height: 350px;
       overflow: hidden;
       margin-bottom: -25px;
-      max-width: 625px;
     }
 
     &:nth-child(even) {

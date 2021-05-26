@@ -52,9 +52,10 @@ export default Vue.extend({});
     margin: 0 auto;
 
     img {
-      min-width: 100%;
-      min-height: 100%;
-      flex-shrink: 0.87;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      overflow: hidden;
     }
   }
 }

@@ -147,7 +147,6 @@ iframe {
     }
 
     .work-video {
-      height: 350px;
       overflow: hidden;
       margin-bottom: -25px;
     }

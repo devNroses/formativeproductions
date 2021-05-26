@@ -304,6 +304,7 @@ ul li {
   transition: all 350ms ease-out;
 
    @media only screen and (max-width: 720px) {
+     margin-top: 18% auto;
        width: 7em;
   height: 7em;
     }
@@ -363,7 +364,7 @@ ul li {
 
     img {
       width: 100%;
-      min-height: 180px;
+      height: auto;
       margin-top: -5px;
       transition: all 0.2s ease-in-out;
       :hover {

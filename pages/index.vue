@@ -303,6 +303,11 @@ ul li {
   border-radius: 55%;
   transition: all 350ms ease-out;
 
+   @media only screen and (max-width: 720px) {
+       width: 7em;
+  height: 7em;
+    }
+
   &:hover {
     border: 2px solid #e3b047;
   }
@@ -318,6 +323,11 @@ ul li {
   border-width: 2.5em 0 2.5em 5em;
   border-color: transparent transparent transparent #e3b047;
   opacity: 0.75;
+
+    @media only screen and (max-width: 720px) {
+      top: 27%;
+  border-width: 1.5em 0 1.5em 3em;
+    }
 }
 
 .play-button-outer:hover {

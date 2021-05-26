@@ -12,7 +12,10 @@
       <div class="landing-video">
         <img src="~/assets/img/video1.jpg" />
         <div class="overlay" />
-        <div class="play-button-outer" @click="toggleModal('536417585')">
+        <div class="play-button-outer" @click="
+          setVideoId('536417585');
+          toggleModal();
+          "">
           <div class="play-button"></div>
         </div>
       </div>
@@ -297,7 +300,7 @@ ul li {
   cursor: pointer;
   position: absolute;
   border: 2px solid #fff;
-  border-radius: 15%;
+  border-radius: 55%;
   transition: all 350ms ease-out;
 
   &:hover {

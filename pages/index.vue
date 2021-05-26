@@ -42,13 +42,22 @@
     </div>
 
     <div class="section">
-      <div class="section-video">
-        <div class="video" @click="toggleModal('536427164')">
-          <img src="~/assets/img/video2.jpg" />
-        </div>
+      <div
+        class="video-container"
+        @click="
+          setVideoId('536427164');
+          toggleModal();
+        "
+      >
+        <img src="~/assets/img/video2.jpg" />
       </div>
     </div>
-    <VideoModal :showModal="show" :viewVideoid="landingVideoId" />
+
+    <VideoModal
+      :showModal="show"
+      :viewVideoid="landingVideoId"
+      toggleShowModal="toggleModal"
+    />
   </div>
 </template>
 
@@ -67,9 +76,11 @@ export default Vue.extend({
     };
   },
   methods: {
-    toggleModal(id: string) {
-      this.landingVideoId = id;
+    toggleModal() {
       this.show = !this.show;
+    },
+    setVideoId(id: string) {
+      this.landingVideoId = id;
     }
   }
 });
@@ -310,5 +321,40 @@ ul li {
 
 .play-button-outer:hover .play-button {
   opacity: 1;
+}
+
+.video {
+  &-container {
+    display: flex;
+    width: 65%;
+    justify-content: center;
+    align-content: center;
+    height: auto;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+      0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 2.15em rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 1210px;
+    transition: all 0.2s ease-in-out;
+
+    :hover {
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+
+    @media only screen and (max-width: 720px) {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      min-height: 180px;
+      margin-top: -5px;
+      transition: all 0.2s ease-in-out;
+      :hover {
+        transform: scale(1.1);
+      }
+    }
+  }
 }
 </style>

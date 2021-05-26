@@ -210,8 +210,7 @@ ul li {
 
     span {
       &:first-child {
-        -webkit-text-stroke: 2px black;
-        color: white;
+        color: #fcd074;
       }
 
       &:last-child {
@@ -360,6 +359,11 @@ ul li {
 
     @media only screen and (max-width: 720px) {
       width: 100%;
+    }
+
+      @media only screen and (max-width: 580px) {
+      width: 100%;
+      max-height: 300px;
     }
 
     img {

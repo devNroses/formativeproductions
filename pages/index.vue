@@ -159,7 +159,6 @@ ul li {
   &-social {
     display: flex;
     flex-direction: column;
-    color: limegreen;
     width: max-content;
     position: absolute;
     top: calc(48% - 40px);
@@ -210,7 +209,8 @@ ul li {
 
     span {
       &:first-child {
-        color: #fcd074;
+        color: #707070;
+     
       }
 
       &:last-child {

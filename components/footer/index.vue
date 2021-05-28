@@ -128,6 +128,9 @@ export default class Footer extends Vue {}
       div {
         width: 100%;
         padding: 20px;
+        @media only screen and (min-width: 850px) {
+          padding: 20px 50px;
+        }
         span {
           color: #e3b047;
           font-weight: bold;
@@ -170,6 +173,10 @@ export default class Footer extends Vue {}
       div {
         width: 100%;
         padding: 20px;
+
+        @media only screen and (min-width: 850px) {
+          padding: 20px 50px;
+        }
         span {
           color: #e3b047;
           font-weight: bold;

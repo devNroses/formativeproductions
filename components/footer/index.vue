@@ -9,7 +9,11 @@
         <div class="footer-content-1">
           <div>
             <span>Email</span>
-            <p>trentoncotten@formativeproductions.com</p>
+            <p>
+              <a href="mailto:trentoncotten@formativeproductions.com"
+                >trentoncotten@formativeproductions.com</a
+              >
+            </p>
           </div>
           <!-- <div>
             <span>Location</span>
@@ -19,8 +23,7 @@
         <div class="footer-content-2">
           <div>
             <span>Phone</span>
-            <!-- <p><a href="tel:7192333620">719-233-3620</a></p> -->
-            <p>303-437-9327</p>
+            <p><a href="tel:3034379327">303-437-9327</a></p>
           </div>
           <!-- <div class="social">
             <div>Instagram</div>
@@ -59,24 +62,19 @@ export default class Footer extends Vue {}
   p {
     font-size: 24px;
     font-weight: bold;
-    color: #131514;
+    margin: 15px auto;
 
-    @media only screen and (max-width: 850px) {
-      font-size: 15px;
-    }
-
-    @media only screen and (max-width: 600px) {
-      font-size: 13px;
-      word-break: break-all;
+    a {
+      color: #131514 !important;
     }
   }
 
   &:first-child {
-    border-bottom: 1px solid #131514;
+    border-bottom: 2px solid #131514;
   }
 
   @media only screen and (max-width: 600px) {
-    border-bottom: 1px solid #131514;
+    border-bottom: 2px solid #131514;
   }
 }
 .footer {
@@ -99,13 +97,16 @@ export default class Footer extends Vue {}
       @media only screen and (max-width: 600px) {
         font-size: 42px;
       }
+      @media only screen and (max-width: 480px) {
+        font-size: 36px;
+      }
     }
   }
 
   &-content {
     display: flex;
-    border-top: 1px solid #131514;
-    border-bottom: 1px solid #131514;
+    border-top: 2px solid #131514;
+    border-bottom: 2px solid #131514;
 
     @media only screen and (max-width: 600px) {
       flex-direction: column;
@@ -118,23 +119,91 @@ export default class Footer extends Vue {}
     &-1 {
       @extend .baseLayoutStyle;
       width: 70%;
+      border-bottom: 2px solid black;
       @media only screen and (max-width: 800px) {
         width: max-content;
         font-size: 15px !important;
       }
 
       div {
-        @extend .baseContentDiv;
+        width: 100%;
+        padding: 20px;
+        span {
+          color: #e3b047;
+          font-weight: bold;
+          margin-bottom: 24px;
+        }
+
+        p {
+          font-size: 24px;
+          font-weight: bold;
+          margin: 15px auto;
+
+          a {
+            color: #131514 !important;
+          }
+
+          @media only screen and (max-width: 850px) {
+            font-size: 15px;
+          }
+
+          @media only screen and (max-width: 600px) {
+            font-size: 13px;
+          }
+
+          @media only screen and (max-width: 600px) {
+            font-size: 12px;
+          }
+          @media only screen and (max-width: 350px) {
+            font-size: 12px;
+          }
+        }
       }
     }
 
     &-2 {
       @extend .baseLayoutStyle;
-      border-left: 1px solid #131514;
+      border-left: 2px solid #131514;
+      border-bottom: 2px solid black;
       flex: 1;
 
       div {
-        @extend .baseContentDiv;
+        width: 100%;
+        padding: 20px;
+        span {
+          color: #e3b047;
+          font-weight: bold;
+          margin-bottom: 24px;
+        }
+
+        p {
+          font-size: 24px;
+          font-weight: bold;
+          margin: 15px auto;
+
+          a {
+            color: #131514 !important;
+
+            &:hover {
+              color: #e3b047;
+            }
+          }
+
+          @media only screen and (max-width: 850px) {
+            font-size: 15px;
+          }
+
+          @media only screen and (max-width: 600px) {
+            font-size: 13px;
+          }
+
+          @media only screen and (max-width: 600px) {
+            font-size: 12px;
+          }
+          @media only screen and (max-width: 350px) {
+            font-size: 12px;
+          }
+        }
       }
     }
   }
@@ -149,7 +218,7 @@ export default class Footer extends Vue {}
     padding: 60px;
     &:first-child {
       border: none !important;
-      border-right: 1px solid #131514;
+      border-right: 2px solid #131514;
     }
   }
 }

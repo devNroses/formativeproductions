@@ -114,6 +114,11 @@ a {
   text-decoration: none;
   transition: all 350ms ease-out;
 
+      @media only screen and (max-width: 600px) {
+        font-size: 14px !important;
+      }
+
+
   &:hover {
     color: #e3b047;
   }
@@ -186,7 +191,6 @@ ul li {
   flex-direction: column;
   margin: 12px 8%;
   padding: 25px;
-  word-break: break-all;
 
   &-video {
     display: flex;

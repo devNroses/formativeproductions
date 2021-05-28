@@ -28,10 +28,21 @@
 
 <script lang="ts">
 import Vue from "vue";
-export default Vue.extend({});
+export default Vue.extend({
+  transition: "contact"
+});
 </script>
 
 <style lang="scss" scoped>
+.contact-enter-active,
+.contact-leave-active {
+  transition: opacity 0.5s;
+}
+.contact-enter,
+.contact-leave-active {
+  opacity: 0;
+}
+
 .contact {
   &-wrapper {
     display: flex;

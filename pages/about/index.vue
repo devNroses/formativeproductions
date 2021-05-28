@@ -98,7 +98,17 @@
   </div>
 </template>
 
+export default { transition: 'about' }
+
 <style lang="scss" scope>
+.about-enter-active,
+.about-leave-active {
+  transition: opacity 0.5s;
+}
+.about-enter,
+.about-leave-active {
+  opacity: 0;
+}
 .about {
   &-container {
     width: 100%;

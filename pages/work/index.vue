@@ -67,6 +67,7 @@ export default Vue.extend({
   components: {
     VideoModal
   },
+  transition: "work",
   data() {
     return {
       show: false,
@@ -85,6 +86,14 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
+.work-enter-active,
+.work-leave-active {
+  transition: opacity 0.5s;
+}
+.work-enter,
+.work-leave-active {
+  opacity: 0;
+}
 iframe {
   width: 100% !important;
 }

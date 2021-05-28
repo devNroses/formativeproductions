@@ -72,6 +72,7 @@ export default Vue.extend({
   components: {
     VideoModal
   },
+  transition: 'home',
   data() {
     return {
       show: false,
@@ -90,6 +91,8 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
+   .home-enter-active, .home-leave-active { transition: opacity .5s; }
+  .home-enter, .home-leave-active { opacity: 0; }
 html,
 body {
   height: 100%;

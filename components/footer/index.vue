@@ -11,16 +11,16 @@
             <span>Email</span>
             <p>trentoncotten@formativeproductions.com</p>
           </div>
-          <div>
-            <span>Address</span>
-            <p>5555 N SPRINGS LANE, CO 80911</p>
-          </div>
+          <!-- <div>
+            <span>Location</span>
+            <p>Denver, Colorado</p>
+          </div> -->
         </div>
         <div class="footer-content-2">
           <div>
             <span>Phone</span>
             <!-- <p><a href="tel:7192333620">719-233-3620</a></p> -->
-            <p>719-233-3620</p>
+            <p>303-437-9327</p>
           </div>
           <!-- <div class="social">
             <div>Instagram</div>

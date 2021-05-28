@@ -28,7 +28,7 @@
         <div class="video-container work-video">
           <img src="~/assets/img/realPeople.png" />
         </div>
-        <p class="work-card-title">Real Peopl / Real Story</p>
+        <p class="work-card-title">Real People/ Real Story</p>
         <!-- <p class="work-card-content">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -46,7 +46,7 @@
         <div class="video-container work-video">
           <img src="~/assets/img/football-season.png" />
         </div>
-        <p class="work-card-title">Football Season</p>
+        <p class="work-card-title">In Game Sports Entertainment</p>
         <!-- <p class="work-card-content">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

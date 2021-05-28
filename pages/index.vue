@@ -44,18 +44,6 @@
       </div>
     </div>
 
-    <div class="section">
-      <div
-        class="video-container"
-        @click="
-          setVideoId('536427164');
-          toggleModal();
-        "
-      >
-        <img src="~/assets/img/video2.jpg" />
-      </div>
-    </div>
-
     <VideoModal
       :showModal="show"
       :viewVideoid="landingVideoId"

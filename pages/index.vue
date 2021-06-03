@@ -10,7 +10,7 @@
         </ul>
       </div> -->
       <div class="landing-video">
-        <img src="~/assets/img/video1.jpg" />
+        <img src="~/assets/img/video1.png" />
         <div class="overlay" />
         <div class="play-button-outer" @click="
           setVideoId('536417585');

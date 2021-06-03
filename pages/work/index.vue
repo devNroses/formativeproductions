@@ -44,7 +44,7 @@
         "
       >
         <div class="video-container work-video">
-          <img src="~/assets/img/football-season.png" />
+          <img src="~/assets/img/video2.png" />
         </div>
         <p class="work-card-title">In Game Sports Entertainment</p>
         <!-- <p class="work-card-content">

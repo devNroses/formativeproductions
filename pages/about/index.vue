@@ -94,6 +94,29 @@
           <p class="members-position">Producer</p>
         </div>
       </div>
+      <div class="team-members">
+        <div>
+          <div class="members-img">
+            <img src="~/assets/img/LouSo.png" alt="Trenton Cotten" />
+          </div>
+          <p class="members-name">LOU SO</p>
+          <p class="members-position">MARKETING DIRECTOR</p>
+        </div>
+        <div>
+          <!-- <div class="members-img">
+            <img src="~/assets/img/tauraCotten.png" alt="Taura Cotten" />
+          </div>
+          <p class="members-name">Taura Cotten</p>
+          <p class="members-position">Project / Business Manager</p> -->
+        </div>
+        <div>
+          <!-- <div class="members-img">
+            <img src="~/assets/img/julieRamirez.png" alt="Julie Ramirez" />
+          </div>
+          <p class="members-name">Julie Ramirez</p>
+          <p class="members-position">Producer</p> -->
+        </div>
+      </div>
     </div>
   </div>
 </template>

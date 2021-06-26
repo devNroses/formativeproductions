@@ -76,22 +76,34 @@
           <div class="members-img">
             <img src="~/assets/img/trentonCotten.png" alt="Trenton Cotten" />
           </div>
-          <p class="members-name">TRENTON COTTEN</p>
-          <p class="members-position">Creative Director / Producer</p>
+          <p class="members-name">
+            TRENTON COTTEN
+          </p>
+          <p class="members-position">
+            Creative Director / Producer
+          </p>
         </div>
         <div>
           <div class="members-img">
             <img src="~/assets/img/tauraCotten.png" alt="Taura Cotten" />
           </div>
-          <p class="members-name">Taura Cotten</p>
-          <p class="members-position">Project / Business Manager</p>
+          <p class="members-name">
+            Taura Cotten
+          </p>
+          <p class="members-position">
+            Project / Business Manager
+          </p>
         </div>
         <div>
           <div class="members-img">
             <img src="~/assets/img/julieRamirez.png" alt="Julie Ramirez" />
           </div>
-          <p class="members-name">Julie Ramirez</p>
-          <p class="members-position">Producer</p>
+          <p class="members-name">
+            Julie Ramirez
+          </p>
+          <p class="members-position">
+            Producer
+          </p>
         </div>
       </div>
       <div class="team-members">
@@ -99,23 +111,13 @@
           <div class="members-img">
             <img src="~/assets/img/LouSo.png" alt="Trenton Cotten" />
           </div>
-          <p class="members-name">LOU SO</p>
-          <p class="members-position">MARKETING DIRECTOR</p>
+          <p class="members-name">
+            LOU SO
+          </p>
+          <p class="members-position">
+            MARKETING DIRECTOR
+          </p>
         </div>
-        <!-- <div> -->
-        <!-- <div class="members-img">
-            <img src="~/assets/img/tauraCotten.png" alt="Taura Cotten" />
-          </div>
-          <p class="members-name">Taura Cotten</p>
-          <p class="members-position">Project / Business Manager</p> -->
-        <!-- </div> -->
-        <!-- <div> -->
-        <!-- <div class="members-img">
-            <img src="~/assets/img/julieRamirez.png" alt="Julie Ramirez" />
-          </div>
-          <p class="members-name">Julie Ramirez</p>
-          <p class="members-position">Producer</p> -->
-        <!-- </div> -->
       </div>
     </div>
   </div>
@@ -295,6 +297,10 @@ export default { transition: 'about' }
       width: 300px;
       height: 380px;
       transition: linear 1s;
+
+      &:first-child {
+        justify-content: flex-start;
+      }
     }
   }
 }

@@ -12,11 +12,14 @@
       <div class="landing-video">
         <img src="~/assets/img/video1.png" />
         <div class="overlay" />
-        <div class="play-button-outer" @click="
-          setVideoId('536417585');
-          toggleModal();
-          "">
-          <div class="play-button"></div>
+        <div
+          class="play-button-outer"
+          @click="
+            setVideoId('536417585');
+            toggleModal();
+          "
+        >
+          <div class="play-button" />
         </div>
       </div>
     </div>
@@ -33,7 +36,9 @@
         representation.
       </p>
 
-      <nuxt-link to="/about">Learn More About Formative Productions</nuxt-link>
+      <nuxt-link to="/about">
+        Learn More About Formative Productions
+      </nuxt-link>
     </div>
 
     <div class="section">
@@ -45,9 +50,9 @@
     </div>
 
     <VideoModal
-      :showModal="show"
-      :viewVideoid="landingVideoId"
-      toggleShowModal="toggleModal"
+      :show-modal="show"
+      :view-videoid="landingVideoId"
+      toggle-show-modal="toggleModal"
     />
   </div>
 </template>
@@ -60,7 +65,7 @@ export default Vue.extend({
   components: {
     VideoModal
   },
-  transition: 'home',
+  transition: "home",
   data() {
     return {
       show: false,
@@ -79,8 +84,14 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
-   .home-enter-active, .home-leave-active { transition: opacity .5s; }
-  .home-enter, .home-leave-active { opacity: 0; }
+.home-enter-active,
+.home-leave-active {
+  transition: opacity 0.5s;
+}
+.home-enter,
+.home-leave-active {
+  opacity: 0;
+}
 html,
 body {
   height: 100%;
@@ -102,10 +113,9 @@ a {
   text-decoration: none;
   transition: all 350ms ease-out;
 
-      @media only screen and (max-width: 600px) {
-        font-size: 14px !important;
-      }
-
+  @media only screen and (max-width: 600px) {
+    font-size: 14px !important;
+  }
 
   &:hover {
     color: #e3b047;
@@ -205,7 +215,6 @@ ul li {
     span {
       &:first-child {
         color: #707070;
-     
       }
 
       &:last-child {
@@ -297,11 +306,11 @@ ul li {
   border-radius: 55%;
   transition: all 350ms ease-out;
 
-   @media only screen and (max-width: 720px) {
-     margin-top: 18% auto;
-       width: 7em;
-  height: 7em;
-    }
+  @media only screen and (max-width: 720px) {
+    margin-top: 18% auto;
+    width: 7em;
+    height: 7em;
+  }
 
   &:hover {
     border: 2px solid #e3b047;
@@ -319,10 +328,10 @@ ul li {
   border-color: transparent transparent transparent #e3b047;
   opacity: 0.75;
 
-    @media only screen and (max-width: 720px) {
-      top: 27%;
-  border-width: 1.5em 0 1.5em 3em;
-    }
+  @media only screen and (max-width: 720px) {
+    top: 27%;
+    border-width: 1.5em 0 1.5em 3em;
+  }
 }
 
 .play-button-outer:hover {
@@ -356,7 +365,7 @@ ul li {
       width: 100%;
     }
 
-      @media only screen and (max-width: 580px) {
+    @media only screen and (max-width: 580px) {
       width: 100%;
       max-height: 300px;
     }

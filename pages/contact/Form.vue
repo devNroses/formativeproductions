@@ -1,14 +1,33 @@
 <template>
   <div class="form-container">
-    <form>
-      <label>Name</label>
-      <input type="text" v-model="name" name="name" placeholder="Your Name" />
+    <form @submit.prevent="sendEmail">
+      <label>Full Name</label>
+      <input
+        type="text"
+        v-model="name"
+        name="full name"
+        placeholder="Full Name"
+      />
+
       <label>Email</label>
       <input
         type="email"
         v-model="email"
         name="email"
         placeholder="Your Email"
+      />
+      <label>Title</label>
+      <input type="text" v-model="title" name="title" placeholder="Title" />
+
+      <label>Phone</label>
+      <input type="phone" v-model="phone" name="phone" placeholder="Phone" />
+
+      <label>Department</label>
+      <input
+        type="text"
+        v-model="department"
+        name="department"
+        placeholder="Department"
       />
       <label>Message</label>
       <textarea
@@ -25,10 +44,54 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from "vue";
-export default Vue.extend({});
+<script>
+import emailjs from "emailjs-com";
+export default {
+  name: "ContactUs",
+  data() {
+    return {
+      name: "",
+      email: "",
+      title: "",
+      phone: "",
+      department: "",
+      message: ""
+    };
+  },
+  methods: {
+    sendEmail() {
+      const templateParams = {
+        name: this.name,
+        email: this.email,
+        title: this.title,
+        phone: this.phone,
+        department: this.department
+      };
+
+      emailjs
+        .send(
+          "service_fyk1zx8",
+          "template_en7macy",
+          templateParams,
+          "user_NQL7fEugMmR23QDAgtXU3"
+        )
+        .then(
+          response => {
+            console.log("SUCCESS!", response.status, response.text);
+          },
+          err => {
+            console.log("FAILED...", err);
+          }
+        );
+    }
+  }
+};
+// Reset form field
 </script>
+
+emailjs.send("service_fyk1zx8","template_en7macy",{ email: "jonDoe@test.com",
+title: "Depart of Pixar", department: "Testing Pixar contact", message: "Just
+testing from the form", first: "Jon", last: "Doe", phone: "8883334932", });
 
 <style lang="scss" scoped>
 * {

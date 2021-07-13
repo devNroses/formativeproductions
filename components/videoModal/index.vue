@@ -2,7 +2,7 @@
   <transition name="fade" appear>
     <div v-if="showModal" class="modal-overlay">
       <div class="modal" role="dialog">
-        <div class="close" @click="resetShowModal"><span>X</span></div>
+        <div class="close" @click="resetShowModal($event)"><span>X</span></div>
 
         <video-wrapper :player="'vimeo'" :videoId="viewVideoid" />
       </div>
@@ -15,13 +15,12 @@ import { Component, Emit, Prop, Vue } from "vue-property-decorator";
 
 @Component
 export default class VideoModal extends Vue {
-  @Prop({ default: "" }) viewVideoid!: string;
+  @Prop(String) viewVideoid!: string;
   @Prop(Boolean) showModal = false;
 
   @Emit("toggleShowModal")
-  resetShowModal() {
-    this.showModal = !this.showModal;
-    this.viewVideoid = "";
+  resetShowModal(e: { target: { value: any } }) {
+    this.$emit("clicked", "");
   }
 }
 </script>

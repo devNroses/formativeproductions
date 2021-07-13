@@ -52,7 +52,7 @@
     <VideoModal
       :show-modal="show"
       :view-videoid="landingVideoId"
-      toggle-show-modal="toggleModal"
+      @clicked="toggleModal"
     />
   </div>
 </template>
@@ -75,6 +75,9 @@ export default Vue.extend({
   methods: {
     toggleModal() {
       this.show = !this.show;
+      if (this.landingVideoId) {
+        this.landingVideoId = "";
+      }
     },
     setVideoId(id: string) {
       this.landingVideoId = id;

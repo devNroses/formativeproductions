@@ -56,7 +56,11 @@
       </div>
     </div>
 
-    <VideoModal :showModal="show" :viewVideoid="workVideoId" />
+    <VideoModal
+      @clicked="toggleModal"
+      :showModal="show"
+      :viewVideoid="workVideoId"
+    />
   </div>
 </template>
 

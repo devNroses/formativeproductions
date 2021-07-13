@@ -22,14 +22,26 @@
           >trentoncotten@formativeproductions.com</a
         >
       </div>
+
+      <div class="contactForm-title">
+        <h1>HI FORMATIVE PRODUCTIONS,</h1>
+        <span>Project Leaders Information</span>
+      </div>
+      <div class="contactForm-container">
+        <Form />
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
+import Form from "./Form.vue";
 export default Vue.extend({
-  transition: "contact"
+  transition: "contact",
+  components: {
+    Form
+  }
 });
 </script>
 
@@ -68,6 +80,32 @@ export default Vue.extend({
       object-fit: cover;
       overflow: hidden;
     }
+  }
+}
+
+.contactForm {
+  &-title {
+    margin-bottom: 25px;
+    h1 {
+      font-size: 48px;
+      font-weight: 900;
+      letter-spacing: -2px;
+    }
+
+    span {
+      font-size: 22px;
+      font-style: italic;
+      font-weight: 400;
+    }
+  }
+  &-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-select {
+    border: 2px dashed dodgerblue;
+    padding: 0 25px;
   }
 }
 </style>

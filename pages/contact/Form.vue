@@ -12,7 +12,7 @@
         <input type="email" v-model="email" name="email" placeholder="Email" />
         <input type="text" v-model="title" name="title" placeholder="Title" />
 
-        <input type="phone" v-model="phone" name="phone" placeholder="Phone" />
+        <input type="text" v-model="phone" name="phone" placeholder="Phone" />
 
         <input
           type="text"
@@ -95,43 +95,62 @@ export default {
       targetaudience: "",
       keymessages: "",
       keydates: "",
-      services: []
+      services: [],
+      invalidPhone: false,
+      invalidEmail: false,
+      servicesSelected: false
     };
   },
   methods: {
+    validEmail: email => {
+      const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(email).toLowerCase());
+    },
     sendEmail() {
-      const templateParams = {
-        name: this.name,
-        email: this.email,
-        title: this.title,
-        phone: this.phone,
-        department: this.department,
-        purposevideo: this.purposevideo,
-        targetaudience: this.targetaudience,
-        keymessages: this.keymessages,
-        keydates: this.keydates,
-        services: this.services
-      };
+      if (this.validEmail(this.email)) {
+        const templateParams = {
+          name: this.name,
+          email: this.email,
+          title: this.title,
+          phone: this.phone,
+          department: this.department,
+          purposevideo: this.purposevideo,
+          targetaudience: this.targetaudience,
+          keymessages: this.keymessages,
+          keydates: this.keydates,
+          services: this.services
+        };
 
-      emailjs
-        .send(
-          "service_fyk1zx8",
-          "template_en7macy",
-          templateParams,
-          "user_NQL7fEugMmR23QDAgtXU3"
-        )
-        .then(
-          response => {
-            console.log("SUCCESS!", response.status, response.text);
-          },
-          err => {
-            console.log("FAILED...", err);
-          }
-        );
+        emailjs
+          .send(
+            "service_fyk1zx8",
+            "template_en7macy",
+            templateParams,
+            "user_NQL7fEugMmR23QDAgtXU3"
+          )
+          .then(
+            response => {
+              console.log("SUCCESS!", response.status, response.text);
+              // Reset form field
+              this.name = "";
+              this.email = "";
+              this.title = "";
+              this.phone = "";
+              this.department = "";
+              this.purposevideo = "";
+              this.targetaudience = "";
+              this.keymessages = "";
+              this.keydates = "";
+              this.services = [];
+            },
+            err => {
+              console.log("FAILED...", err);
+            }
+          );
+      }
     }
   }
 };
-// Reset form field
 </script>
 
 emailjs.send("service_fyk1zx8","template_en7macy",{ email: "jonDoe@test.com",
@@ -236,6 +255,7 @@ textarea {
   &:focus {
     opacity: 1;
     border-bottom: 1px solid #111;
+    color: #111;
   }
 }
 

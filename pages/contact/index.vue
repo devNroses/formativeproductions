@@ -28,8 +28,7 @@
         <span>Project Leaders Information</span>
       </div>
       <div class="contactForm-container">
-        <div><Form /></div>
-        <div>Drop down</div>
+        <Form />
       </div>
     </div>
   </div>
@@ -102,26 +101,11 @@ export default Vue.extend({
   &-container {
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid orange;
+  }
 
-    div {
-      border: 2px dashed hotpink;
-      &:first-child {
-        width: 70%;
-        min-width: 380px;
-      }
-
-      &:last-child {
-        flex: 1;
-      }
-
-      @media only screen and (max-width: 600px) {
-        div {
-          width: 100%;
-          min-width: 100%;
-        }
-      }
-    }
+  &-select {
+    border: 2px dashed dodgerblue;
+    padding: 0 25px;
   }
 }
 </style>

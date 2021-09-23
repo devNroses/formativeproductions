@@ -96,7 +96,7 @@
         </div>
         <div>
           <div class="members-img">
-            <img src="~/assets/img/julieRamirez.png" alt="Julie Ramirez" />
+            <img src="~/assets/img/julieRamirez.png" alt="Julie, Producer" />
           </div>
           <p class="members-name">
             Julie Ramirez
@@ -109,13 +109,24 @@
       <div class="team-members">
         <div>
           <div class="members-img">
-            <img src="~/assets/img/LouSo.png" alt="Trenton Cotten" />
+            <img src="~/assets/img/LouSo.png" alt="Lou, Marketing Director" />
           </div>
           <p class="members-name">
             LOU SO
           </p>
           <p class="members-position">
-            MARKETING DIRECTOR
+            Marketing Director
+          </p>
+        </div>
+        <div>
+          <div class="members-img">
+            <img src="~/assets/img/Omar.jpg" alt="Omar, Executive Producer" />
+          </div>
+          <p class="members-name">
+            Omar Williams
+          </p>
+          <p class="members-position">
+            Executive Producer
           </p>
         </div>
       </div>

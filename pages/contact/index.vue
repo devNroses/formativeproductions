@@ -5,7 +5,7 @@
     </div>
     <div class="contact-content-wrapper">
       <div class="section">
-        <h1>
+        <h1 class="contact-title">
           WE LOVE NEW <br />
           <span>CHALLENGES</span>
         </h1>
@@ -79,6 +79,13 @@ export default Vue.extend({
       height: 100%;
       object-fit: cover;
       overflow: hidden;
+    }
+  }
+
+  &-title {
+    font-size: 4.5vw;
+    @media only screen and (max-width: 700px) {
+      font-size: 8.5vw;
     }
   }
 }

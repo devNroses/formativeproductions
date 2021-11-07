@@ -1,59 +1,48 @@
 <template>
-  <div class="wrapper">
-    <div class="landing-container">
-      Landing Here
-      <!-- <div class="landing-social">
-        <ul>
-          <li><a href="#"><img src="~/assets/img/instagram.png" /></a></li>
-          <li><a href="#"><img src="~/assets/img/twitter.png" /></a></li>
-          <li><a href="#"><img src="~/assets/img/vimeo.png" /></a></li>
-        </ul>
-      </div> -->
-      <div class="landing-video">
-        <img src="~/assets/img/video1.png" />
-        <div class="overlay" />
-        <div
-          class="play-button-outer"
-          @click="
-            setVideoId('536417585');
-            toggleModal();
-          "
-        >
-          <div class="play-button" />
+  <div class="landing-container">
+    <div class="landing-feature-video">
+      <video-wrapper :player="'vimeo'" videoId="536417585" />
+    </div>
+
+    <div class="intro">
+      <div class="intro-title">
+        <p>WE ARE</p>
+        <p>FORMATIVE</p>
+        <p>PRODUCTIONS</p>
+      </div>
+      <div class="svg"><img src="~/assets/img/arrow.svg" /></div>
+      <div class="work">
+        <p>
+          Specializing in visual storytelling, Formative Productions is your
+          go-to source for excellent results. From development to production,
+          our company is here to transmit your ideas into a stunning visual
+          representation.
+        </p>
+      </div>
+      <div id="work" name="work" class="intro-title gallery-title">
+        <p>OUR WORK</p>
+      </div>
+      <div id="#gallery" class="gallery">
+        <div v-on:mouseover="mouseover('487463591')">
+          <div
+            v-show="hover && activeVideoId === '487463591'"
+            class="gallery-video"
+          >
+            <video-wrapper :player="'vimeo'" videoId="487463591" />
+          </div>
+          <img src="~/assets/img/realPeople.png" />
+        </div>
+        <div v-on:mouseover="mouseover('536427164')">
+          <div
+            v-show="hover && activeVideoId === '536427164'"
+            class="gallery-video"
+          >
+            <video-wrapper :player="'vimeo'" videoId="536427164" />
+          </div>
+          <img src="~/assets/img/video2.png" />
         </div>
       </div>
     </div>
-
-    <div class="section">
-      <h1>
-        WE ARE <br />
-        <span>FORMATIVE <br />PRODUCTIONS</span>
-      </h1>
-      <p>
-        Specializing in visual storytelling, Formative Productions is your go-to
-        source for excellent results. From development to production, our
-        company is here to transmit your ideas into a stunning visual
-        representation.
-      </p>
-
-      <nuxt-link to="/about">
-        Learn More About Formative Productions
-      </nuxt-link>
-    </div>
-
-    <div class="section">
-      <div class="section-announcement section-announcement-right">
-        <span>FROM IDEA</span>
-        <span>TO PRODUCTION</span>
-        <span>TO REALITY</span>
-      </div>
-    </div>
-
-    <VideoModal
-      :show-modal="show"
-      :view-videoid="landingVideoId"
-      @clicked="toggleModal"
-    />
   </div>
 </template>
 
@@ -68,16 +57,28 @@ export default Vue.extend({
   transition: "home",
   data() {
     return {
-      show: false,
-      landingVideoId: ""
+      hover: false,
+      activeVideoId: "",
+      workList: [
+        {
+          videoSrc: "487463591",
+          imgSrc: "realPeople.png"
+        },
+        {
+          videoSrc: "536427164",
+          imgSrc: "video2.png"
+        }
+      ]
     };
   },
   methods: {
-    toggleModal() {
-      this.show = !this.show;
+    mouseover(videoId: string) {
+      this.activeVideoId = videoId;
+      this.hover = true;
     },
-    setVideoId(id: string) {
-      this.landingVideoId = id;
+    mouseleave() {
+      this.hover = false;
+      this.activeVideoId = "";
     }
   }
 });
@@ -92,11 +93,7 @@ export default Vue.extend({
 .home-leave-active {
   opacity: 0;
 }
-html,
-body {
-  height: 100%;
-  width: 100%;
-}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -131,253 +128,137 @@ ul li {
     background: #131514;
     padding: 0;
     margin-bottom: 40px;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-  }
-
-  &-video {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    margin-top: -8px;
-    padding: 0;
-    top: -10px;
-    left: 0;
     width: 100%;
-    height: 100%;
     overflow: hidden;
-
-    .overlay {
-      display: block;
-      background: rgba(0, 0, 0, 0.4);
-    }
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      overflow: hidden;
-    }
-  }
-
-  &-social {
-    display: flex;
-    flex-direction: column;
-    width: max-content;
-    position: absolute;
-    top: calc(48% - 40px);
-    margin-left: 50px;
-
-    @media only screen and (max-width: 540px) {
-      display: none;
-    }
-
-    ul li {
-      margin-bottom: 30px;
-
-      img {
-        width: 20px;
-      }
-    }
   }
 }
 
-.section {
-  display: flex;
-  flex-direction: column;
-  margin: 12px 8%;
-  padding: 25px;
+.landing-feature-video {
+  position: relative;
+  padding-bottom: 56.25%;
+  margin-top: -20px;
+  height: 0;
+  height: 100%;
+  max-width: 100%;
 
-  &-video {
-    display: flex;
-    width: 100%;
-    height: auto;
-    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
-      0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 2.15em rgba(0, 0, 0, 0.25);
+  @media only screen and (max-width: 540px) {
+    padding-bottom: 58.25%;
   }
+}
 
-  &-announcement {
-    display: flex;
-    flex-direction: column;
-    font-size: 64px;
-    font-weight: 700;
-    padding: 0 4%;
+.landing-feature-video iframe,
+.landing-feature-video object,
+.landing-feature-video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
 
-    &-left {
-      text-align: left;
-    }
-    &-right {
-      text-align: right;
-    }
+.intro {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: white;
+  margin-top: 40px;
+  margin-bottom: -20px;
+  padding: 30px 15px 40px;
 
-    span {
+  &-title {
+    p {
+      font-size: 9.5vw;
+      line-height: 8.5vw;
+      font-weight: 400;
+      color: #131514;
+      padding-left: 50px;
+
       &:first-child {
-        color: #707070;
-      }
-
-      &:last-child {
         color: #e3b047;
       }
     }
-
-    @media only screen and (max-width: 540px) {
-      font-size: 36px;
-    }
   }
 
-  h1 {
-    font-size: 48px;
-    font-weight: 900;
+  div {
+    width: 100%;
+    &.svg {
+      display: flex;
+      justify-content: center;
+      padding-left: 80px;
 
-    span {
-      color: #e3b047;
+      img {
+        width: 50vw;
+      }
     }
   }
+}
+
+.work {
+  display: flex;
+  justify-content: flex-end;
 
   p {
-    max-width: 620px;
-    font-size: 18px;
-    line-height: 2.25;
-    margin-top: 24px;
-  }
-
-  a {
-    color: #e3b047;
-    margin-top: 18px;
-    font-weight: 800;
-    border-bottom: #e3b047 1px solid;
-    max-width: fit-content;
-    padding-bottom: 4px;
-
-    &:hover {
-      color: #f5be4b;
-      border-bottom: #f5be4b 1px solid;
-    }
-  }
-
-  @media only screen and (max-width: 540px) {
-    margin: 12px 0;
+    text-align: right;
+    font-size: 2.5vw;
+    line-height: 3.75vw;
+    padding-right: 50px;
+    width: 55vw;
   }
 }
 
-.video {
-  width: 100%;
-  max-height: 360px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+.gallery {
+  width: 90vw;
+  height: 400px;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  color: white;
+  padding: 10px;
+  margin-top: 60px;
 
-  &:hover {
-    cursor: pointer;
+  &-title {
+    margin-top: 40px;
   }
 
-  @media only screen and (max-width: 780px) {
-    height: 210px;
-  }
-
-  img {
-    min-width: 100%;
-    min-height: 100%;
-  }
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-  background: rgba(0, 0, 0, 0.3);
-  color: #fff;
-  transition: all 300ms ease-in-out;
-}
-
-.play-button-outer {
-  margin: 25% auto;
-  width: 10em;
-  height: 10em;
-  background-color: rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  position: absolute;
-  border: 2px solid #fff;
-  border-radius: 55%;
-  transition: all 350ms ease-out;
-
-  @media only screen and (max-width: 720px) {
-    margin-top: 18% auto;
-    width: 7em;
-    height: 7em;
-  }
-
-  &:hover {
-    border: 2px solid #e3b047;
-  }
-}
-
-.play-button {
-  margin: 0 auto;
-  top: 25%;
-  position: relative;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 2.5em 0 2.5em 5em;
-  border-color: transparent transparent transparent #e3b047;
-  opacity: 0.75;
-
-  @media only screen and (max-width: 720px) {
-    top: 27%;
-    border-width: 1.5em 0 1.5em 3em;
-  }
-}
-
-.play-button-outer:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.play-button-outer:hover .play-button {
-  opacity: 1;
-}
-
-.video {
-  &-container {
-    display: flex;
-    width: 65%;
-    justify-content: center;
-    align-content: center;
-    height: auto;
-    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
-      0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 2.15em rgba(0, 0, 0, 0.25);
+  div {
+    display: inline-block;
+    width: 100%;
+    max-width: 780px;
+    min-width: 450px;
     overflow: hidden;
-    margin: 0 auto;
-    max-width: 1210px;
-    transition: all 0.2s ease-in-out;
+    height: 100%;
+    transition: transform 1.2s;
+    will-change: transform;
 
-    :hover {
-      transform: scale(1.2);
-      cursor: pointer;
-    }
-
-    @media only screen and (max-width: 720px) {
-      width: 100%;
-    }
-
-    @media only screen and (max-width: 580px) {
-      width: 100%;
-      max-height: 300px;
+    :hover,
+    :focus {
+      transform: translateY(-1px);
     }
 
     img {
       width: 100%;
+      min-height: 100%;
       height: auto;
-      margin-top: -5px;
-      transition: all 0.2s ease-in-out;
-      :hover {
-        transform: scale(1.1);
-      }
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  &-video {
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: #111;
+
+    iframe,
+    object,
+    embed {
+      display: block;
+      width: 80vw;
+      height: 100%;
+      min-width: 100%;
+      min-height: 100%;
     }
   }
 }

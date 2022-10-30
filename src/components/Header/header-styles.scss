@@ -4,12 +4,27 @@
 
 .nav {
   &-container {
-    border: 2px dashed hotpink;
     display: flex;
     justify-content: space-between;
     padding: 10px 65px;
   }
 
-  &-logo {
+  &-logo,
+  &-pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-pages {
+    ul {
+      display: inline-flex;
+      list-style: none;
+      width: 270px;
+
+      li {
+        width: 30%;
+      }
+    }
   }
 }

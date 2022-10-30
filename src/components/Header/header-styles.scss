@@ -1,0 +1,15 @@
+* {
+  transition: all 0.2s;
+}
+
+.nav {
+  &-container {
+    border: 2px dashed hotpink;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 65px;
+  }
+
+  &-logo {
+  }
+}

@@ -1,10 +1,15 @@
 import './header-styles.scss';
 
-import React from 'react';
+import React, { useState } from 'react';
 
 import Logo2 from '../../assets/images/formative-logo.png';
 
 const Header: React.FC = () => {
+  const [showMenu, setShowMenu] = useState(false);
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
   return (
     <nav className="nav-container">
       <div className="nav-logo">
@@ -15,12 +20,17 @@ const Header: React.FC = () => {
         />
       </div>
       <div className="nav-pages">
-        <ul>
-          <li>Work</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
+        <button
+          className={showMenu ? "change" : ""}
+          onClick={() => toggleMenu()}
+        >
+          <div className="bar1"></div>
+          <div className="bar2"></div>
+          <div className="bar3"></div>
+        </button>
       </div>
+
+      {showMenu && <div className="nav-list"></div>}
     </nav>
   );
 };

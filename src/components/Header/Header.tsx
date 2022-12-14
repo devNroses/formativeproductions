@@ -30,7 +30,7 @@ const Header: React.FC = () => {
         </button>
       </div>
 
-      <div className="nav-list"></div>
+      {showMenu && <div className="nav-list"></div>}
     </nav>
   );
 };

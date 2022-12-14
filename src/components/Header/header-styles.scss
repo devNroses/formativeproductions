@@ -38,11 +38,12 @@
 
   &-list {
     background-color: pink;
-    height: 50%;
+    height: 100%;
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
+    z-index: 1;
   }
 }
 

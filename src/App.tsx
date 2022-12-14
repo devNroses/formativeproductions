@@ -1,23 +1,17 @@
 import './App.css';
 
 import React from 'react';
-import ReactPlayer from 'react-player';
 
+import FeaturedVideo from './components/FeaturedVideo';
 import Header from './components/Header/Header';
+import Work from './components/Work';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
+    <div>
       <Header />
-      <ReactPlayer
-        url="https://vimeo.com/536417585?embedded=true&source=vimeo_logo&owner=122570197"
-        controls={false}
-        loop={true}
-        playing={true}
-        muted={true}
-        autoPlay={true}
-        volume={0}
-      />
+      <FeaturedVideo />
+      <Work />
     </div>
   );
 };

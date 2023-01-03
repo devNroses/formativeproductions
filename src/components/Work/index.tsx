@@ -25,6 +25,8 @@ const Work = () => {
     // To check the scroll position on page load
     reveal();
   });
+
+  const videos = ["536427164", "487463591"];
   return (
     <div className="work-section">
       <div className="work-title">
@@ -36,38 +38,24 @@ const Work = () => {
       </div>
       <section className="work-container">
         <div className="text-container">
-          <div className="text-box reveal">
-            <div className="box">
-              <Vimeo
-                video="536427164"
-                width={800}
-                height={800}
-                autoplay
-                loop={true}
-                controls={false}
-                muted={true}
-                responsive={true}
-                background={true}
-                className="video-feat"
-              />
+          {videos.map((videoId, i: number) => (
+            <div className="text-box reveal" key={i}>
+              <div className="box">
+                <Vimeo
+                  video={videoId}
+                  width={800}
+                  height={800}
+                  autoplay={false}
+                  loop={true}
+                  controls={false}
+                  muted={true}
+                  responsive={true}
+                  background={true}
+                  className="video-feat"
+                />
+              </div>
             </div>
-          </div>
-          <div className="text-box reveal">
-            <div className="box">
-              <Vimeo
-                video="487463591"
-                width={800}
-                height={800}
-                autoplay
-                loop={true}
-                controls={false}
-                muted={true}
-                responsive={true}
-                background={true}
-                className="video-feat"
-              />
-            </div>
-          </div>
+          ))}
         </div>
       </section>
     </div>

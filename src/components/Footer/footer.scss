@@ -1,0 +1,26 @@
+.footer {
+  &-wrapper {
+    display: flex;
+    justify-items: flex-start;
+    bottom: 0;
+    height: 140px;
+    width: 100%;
+    margin-top: 80px;
+    gap: 24px;
+    flex-wrap: wrap;
+    border-top: 3px solid #111;
+    padding-top: 40px;
+
+    div {
+      width: 100%;
+      max-width: 380px;
+      padding: 0px 40px;
+      .title {
+        font-size: 16px;
+        font-weight: 550;
+        text-transform: uppercase;
+        letter-spacing: -1.5px;
+      }
+    }
+  }
+}

@@ -19,6 +19,10 @@ const About: React.FC = () => {
           </p>
         </div>
       </div>
+      <div className="about-mission">
+        <div>img</div>
+        <div>content</div>
+      </div>
     </div>
   );
 };

@@ -43,6 +43,23 @@
       }
     }
   }
+
+  &-mission {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    border: 1px solid hotpink;
+    height: 100%;
+    gap: 40px;
+    padding: 0 60px;
+
+    div {
+      border: 1px solid limegreen;
+      width: 720px;
+      height: 600px;
+      margin: 0 auto;
+    }
+  }
 }
 
 @media (max-width: 540px) {
